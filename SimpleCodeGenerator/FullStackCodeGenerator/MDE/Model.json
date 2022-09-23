@@ -1,0 +1,31 @@
+{
+  "name": "Bookshop",
+  "entities": [
+    {
+      "name": "Book",
+      "attributes": [
+        {
+          "name": "Title",
+          "type": "string"
+        },
+        {
+          "name": "Description",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Fryingpan",
+      "attributes": [
+        {
+          "name": "Title",
+          "type": "string"
+        },
+        {
+          "name": "Eggman",
+          "type": "string"
+        }
+      ]
+    }
+  ]
+}

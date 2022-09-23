@@ -1,0 +1,18 @@
+<#@ template language="C#" inherits="BaseTemplate<EntityTemplate>"#>
+<#@ import namespace="SimpleCodeGenerator" #>
+
+export default class <#= Model.Entity.Name #>
+{
+<#
+	foreach (var attribute in Model.Entity.Attributes)
+	{
+#>
+	<#= attribute.Name #>: <#= attribute.Type #>;
+<#
+	}
+#>
+}
+
+<#+
+    public override string RelativeFilePath => $"{Model.Entity.Name}.tsx";
+#>

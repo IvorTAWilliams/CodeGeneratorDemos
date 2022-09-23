@@ -1,0 +1,56 @@
+<#@ template language="C#" inherits="BaseTemplate<EntityTemplate>"#>
+<#@ import namespace="SimpleCodeGenerator" #>
+import React, { useState } from 'react'
+import { useCreate, useDelete, useRead } from '../../Hooks/CrudHooks'
+import { <#= Model.Entity.Name #> } from '../../Models/<#= Model.Entity.Name #>'
+import <#= Model.Entity.Name #>Attributes from '../Components/<#= Model.Entity.Name #>Attributes'
+
+const <#= Model.Entity.Name #>Page = () => {
+  const { data, refetchFn } = useRead('<#= Model.Entity.Name #>');
+  const [model, setModel] = useState<<#= Model.Entity.Name #>>({});
+  const createFn = useCreate('<#= Model.Entity.Name #>');
+  const deleteFn = useDelete('<#= Model.Entity.Name #>');
+
+  const onCreateModel = () => {
+    createFn(model)
+      .then(() => {
+        setModel({});
+        refetchFn();
+      });
+  }
+
+  const onDeleteModel = (model: <#= Model.Entity.Name #>) => {
+    deleteFn(model)
+      .then(() => {
+        setModel({});
+        refetchFn();
+      });
+  }
+
+  return (
+    <div>
+      <div>
+        <h2>Create a <#= Model.Entity.Name #></h2>
+        <<#= Model.Entity.Name #>Attributes model={model} onChange={(updatedModel) => setModel(updatedModel)} />
+        <button onClick={onCreateModel}>Create</button>
+      </div>
+      <div>
+        <h2>All <#= Model.Entity.Name #>s</h2>
+        {
+          data?.map(x =>
+            <>
+              <<#= Model.Entity.Name #>Attributes key={x.Id} model={x} readonly />
+              <button onClick={() => onDeleteModel(x)}>Delete</button>
+            </>
+          )
+        }
+      </div>
+    </div>
+  )
+}
+export default <#= Model.Entity.Name #>Page
+
+
+<#+
+    public override string RelativeFilePath => $"Clientside/src/Views/Pages/{Model.Entity.Name}Page.tsx";
+#>

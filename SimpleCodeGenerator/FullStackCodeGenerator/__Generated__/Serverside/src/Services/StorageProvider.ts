@@ -1,0 +1,30 @@
+import { Injectable } from '@nestjs/common';
+import { BaseEntity } from 'src/Models/BaseEntity';
+import { v4 as uuidv4 } from 'uuid';
+
+@Injectable()
+export class StorageProvider {
+  private InMemoryStorage: {[key: string]: Array<BaseEntity> | undefined} = {}
+
+  Create<T extends BaseEntity>(model: T, modelName: string): T {
+    model.Id = model.Id ?? uuidv4();
+    this.InMemoryStorage[modelName] = !this.InMemoryStorage[modelName] ? [model] : [...this.InMemoryStorage[modelName], model]
+    return model;
+  }
+
+  Read<T extends BaseEntity>(modelName: string): Array<T> {
+    return this.InMemoryStorage[modelName] as T[];
+  }
+
+  Update<T extends BaseEntity>(model: T, modelName: string): T {
+    const index = this.InMemoryStorage[modelName].findIndex(x => x.Id === model.Id);
+    this.InMemoryStorage[modelName][index] = model;
+    return model;
+  }
+
+  Delete<T extends BaseEntity>(model: T, modelName: string): T {
+    this.InMemoryStorage[modelName] = this.InMemoryStorage[modelName].filter(x => x.Id !== model.Id);
+    return model;
+  }
+}
+

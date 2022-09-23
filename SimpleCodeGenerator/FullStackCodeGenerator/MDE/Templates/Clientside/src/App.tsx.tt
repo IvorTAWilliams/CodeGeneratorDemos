@@ -1,0 +1,85 @@
+<#@ template language="C#" inherits="BaseTemplate<ProjectTemplate>"#>
+<#@ import namespace="SimpleCodeGenerator" #>
+import React from 'react';
+import styled from 'styled-components'
+import {
+  BrowserRouter as Router,
+  Route,
+  Link,
+  Routes
+} from "react-router-dom";
+<#
+    foreach (var entity in Model.Project.Entities)
+    {
+#>
+import <#= entity.Name #>Page from './Views/Pages/<#= entity.Name #>Page';
+<#
+    }
+#>
+
+const AppWrapper = styled.div`
+font-family: sans-serif;
+.nav {
+  background: black;
+  display: flex;
+  padding: 1rem;
+  a {
+    color: white;
+    margin: 0 2rem;
+  }
+}
+.body {
+  padding: 3rem;
+}
+.attributes {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  .attribute {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+  }
+}
+button {
+  background: black;
+  color: white;
+}
+`
+
+function App() {
+  return (
+    <AppWrapper>
+      <Router>
+        <div className='nav'>
+<#
+    foreach (var entity in Model.Project.Entities)
+    {
+#>
+          <Link to="<#= entity.Name #>"><#= entity.Name #></Link>
+<#
+    }
+#>
+        </div>
+        <div className='body'>
+          <Routes>
+<#
+    foreach (var entity in Model.Project.Entities)
+    {
+#>
+            <Route path="/<#= entity.Name #>" element={<<#= entity.Name #>Page />} />
+<#
+    }
+#>
+          </Routes>
+        </div>
+      </Router>
+    </AppWrapper>
+  );
+}
+
+export default App;
+
+<#+
+    public override string RelativeFilePath => $"Clientside/src/App.tsx";
+#>

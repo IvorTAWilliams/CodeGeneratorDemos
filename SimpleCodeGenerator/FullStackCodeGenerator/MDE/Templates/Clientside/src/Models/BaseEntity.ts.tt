@@ -1,0 +1,9 @@
+<#@ template language="C#" inherits="BaseTemplate<ProjectTemplate>"#>
+<#@ import namespace="SimpleCodeGenerator" #>
+export class BaseEntity {
+  public Id?: string;
+}
+
+<#+
+    public override string RelativeFilePath => $"Clientside/src/Models/BaseEntity.ts";
+#>

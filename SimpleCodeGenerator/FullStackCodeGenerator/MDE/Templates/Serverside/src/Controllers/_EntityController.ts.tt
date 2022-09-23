@@ -1,0 +1,34 @@
+<#@ template language="C#" inherits="BaseTemplate<EntityTemplate>"#>
+<#@ import namespace="SimpleCodeGenerator" #>
+import { StorageProvider } from './../Services/StorageProvider';
+import { Body, Controller, Get, Post } from '@nestjs/common';
+import { <#= Model.Entity.Name #> } from 'src/Models/<#= Model.Entity.Name #>';
+
+@Controller('<#= Model.Entity.Name #>')
+export class <#= Model.Entity.Name #>Controller {
+  constructor(private readonly storageProvider: StorageProvider) {}
+
+  @Post('create')
+  create(@Body() entity: <#= Model.Entity.Name #>): <#= Model.Entity.Name #> {
+    return this.storageProvider.Create(entity, '<#= Model.Entity.Name #>');
+  }
+
+  @Get('read')
+  read(): Array<<#= Model.Entity.Name #>> {
+    return this.storageProvider.Read('<#= Model.Entity.Name #>');
+  }
+
+  @Post('update')
+  update(@Body() entity: <#= Model.Entity.Name #>): <#= Model.Entity.Name #> {
+    return this.storageProvider.Update(entity, '<#= Model.Entity.Name #>');
+  }
+
+  @Post('delete')
+  delete(@Body() entity: <#= Model.Entity.Name #>): <#= Model.Entity.Name #> {
+    return this.storageProvider.Delete(entity, '<#= Model.Entity.Name #>');
+  }
+}
+
+<#+
+    public override string RelativeFilePath => $"Serverside/src/Controllers/{Model.Entity.Name}Controller.ts";
+#>

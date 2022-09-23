@@ -1,0 +1,34 @@
+<#@ template language="C#" inherits="BaseTemplate<EntityTemplate>"#>
+<#@ import namespace="SimpleCodeGenerator" #>
+import React from 'react'
+import { <#= Model.Entity.Name #> } from '../../Models/<#= Model.Entity.Name #>';
+
+interface <#= Model.Entity.Name #>AttributesProps {
+  model: <#= Model.Entity.Name #>;
+  readonly?: boolean;
+  onChange?: (model: <#= Model.Entity.Name #>) => void;
+}
+
+const <#= Model.Entity.Name #>Attributes = (props: <#= Model.Entity.Name #>AttributesProps) => (
+  <div className='attributes'>
+<#
+    foreach (var attribute in Model.Entity.Attributes)
+    {
+#>
+    <div className='attribute'>
+      <span><#= attribute.Name #></span>
+      <input
+        disabled={props.readonly}
+        value={props.model.<#= attribute.Name #>}
+        onChange={x => props.onChange ? props.onChange({ ...props.model, <#= attribute.Name #>: x.target.value }) : null} />
+    </div>
+<#
+    }
+#>
+  </div>
+)
+export default <#= Model.Entity.Name #>Attributes
+
+<#+
+    public override string RelativeFilePath => $"Clientside/src/Views/Components/{Model.Entity.Name}Attributes.tsx";
+#>
