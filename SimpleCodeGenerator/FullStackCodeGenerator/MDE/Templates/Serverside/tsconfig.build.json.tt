@@ -1,0 +1,10 @@
+<#@ template language="C#" inherits="BaseTemplate<ProjectTemplate>"#>
+<#@ import namespace="SimpleCodeGenerator" #>
+{
+    "extends": "./tsconfig.json",
+    "exclude": ["node_modules", "test", "dist", "**/*spec.ts"]
+}
+
+<#+
+    public override string RelativeFilePath => $"Serverside/tsconfig.build.json";
+#>

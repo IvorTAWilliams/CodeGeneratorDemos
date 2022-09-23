@@ -13,7 +13,7 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class index_tsx_tt_faeb266a_4048_464a_a008_a3876d58d168 : BaseTemplate<ProjectTemplate> {
+    public partial class index_tsx_tt_c0cdf5df_a093_4d53_8886_565f8f9b79dc : BaseTemplate<ProjectTemplate> {
         
         
         #line 25 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\index.tsx.tt"

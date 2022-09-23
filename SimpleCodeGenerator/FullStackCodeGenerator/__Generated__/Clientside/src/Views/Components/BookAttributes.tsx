@@ -23,6 +23,13 @@ const BookAttributes = (props: BookAttributesProps) => (
         value={props.model.Description}
         onChange={x => props.onChange ? props.onChange({ ...props.model, Description: x.target.value }) : null} />
     </div>
+    <div className='attribute'>
+      <span>Price</span>
+      <input
+        disabled={props.readonly}
+        value={props.model.Price}
+        onChange={x => props.onChange ? props.onChange({ ...props.model, Price: x.target.value }) : null} />
+    </div>
   </div>
 )
 export default BookAttributes

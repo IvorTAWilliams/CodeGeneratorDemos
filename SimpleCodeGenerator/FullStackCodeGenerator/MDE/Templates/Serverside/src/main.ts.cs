@@ -13,10 +13,10 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class main_ts_tt_297774f5_f9bd_44c4_91ac_30ad6a97e8e8 : BaseTemplate<ProjectTemplate> {
+    public partial class main_ts_tt_72916599_1a95_472d_aee6_2fdcce5e6598 : BaseTemplate<ProjectTemplate> {
         
         
-        #line 18 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\main.ts.tt"
+        #line 19 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\main.ts.tt"
 
     public override string RelativeFilePath => $"Serverside/src/main.ts";
 
@@ -34,6 +34,7 @@ import { AppModule } from './app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.enableCors();
 
   const config = new DocumentBuilder().build();
   const document = SwaggerModule.createDocument(app, config);

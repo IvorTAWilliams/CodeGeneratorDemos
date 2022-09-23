@@ -13,10 +13,10 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class App_tsx_tt_86eecae8_bc80_4f55_ab40_777ad3cc0f87 : BaseTemplate<ProjectTemplate> {
+    public partial class App_tsx_tt_890373f3_89fc_4a63_b108_e39cd287f0fd : BaseTemplate<ProjectTemplate> {
         
         
-        #line 83 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+        #line 86 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
 
     public override string RelativeFilePath => $"Clientside/src/App.tsx";
 
@@ -112,6 +112,9 @@ button {
   background: black;
   color: white;
 }
+input {
+  height: 1.5rem;
+}
 `
 
 function App() {
@@ -124,7 +127,7 @@ function App() {
             #line default
             #line hidden
             
-            #line 55 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 58 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
 
     foreach (var entity in Model.Project.Entities)
     {
@@ -133,37 +136,37 @@ function App() {
             #line default
             #line hidden
             
-            #line 59 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 62 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write("          <Link to=\"");
             
             #line default
             #line hidden
             
-            #line 59 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 62 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture( entity.Name ));
             
             #line default
             #line hidden
             
-            #line 59 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 62 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write("\">");
             
             #line default
             #line hidden
             
-            #line 59 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 62 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture( entity.Name ));
             
             #line default
             #line hidden
             
-            #line 59 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 62 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write("</Link>\r\n");
             
             #line default
             #line hidden
             
-            #line 60 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 63 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
 
     }
 
@@ -171,13 +174,13 @@ function App() {
             #line default
             #line hidden
             
-            #line 63 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 66 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write("        </div>\r\n        <div className=\'body\'>\r\n          <Routes>\r\n");
             
             #line default
             #line hidden
             
-            #line 66 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 69 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
 
     foreach (var entity in Model.Project.Entities)
     {
@@ -186,37 +189,37 @@ function App() {
             #line default
             #line hidden
             
-            #line 70 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 73 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write("            <Route path=\"/");
             
             #line default
             #line hidden
             
-            #line 70 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 73 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture( entity.Name ));
             
             #line default
             #line hidden
             
-            #line 70 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 73 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write("\" element={<");
             
             #line default
             #line hidden
             
-            #line 70 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 73 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture( entity.Name ));
             
             #line default
             #line hidden
             
-            #line 70 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 73 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write("Page />} />\r\n");
             
             #line default
             #line hidden
             
-            #line 71 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 74 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
 
     }
 
@@ -224,7 +227,7 @@ function App() {
             #line default
             #line hidden
             
-            #line 74 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
+            #line 77 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\App.tsx.tt"
             this.Write("          </Routes>\r\n        </div>\r\n      </Router>\r\n    </AppWrapper>\r\n  );\r\n}\r" +
                     "\n\r\nexport default App;\r\n\r\n");
             

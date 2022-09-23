@@ -13,7 +13,7 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class CrudHooks_ts_tt_e9a44a3d_49ef_43d6_87fb_0163f3aefe23 : BaseTemplate<ProjectTemplate> {
+    public partial class CrudHooks_ts_tt_005cc16d_b559_41c8_bd4e_818c104fd0f9 : BaseTemplate<ProjectTemplate> {
         
         
         #line 36 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\Hooks\CrudHooks.ts.tt"
@@ -43,7 +43,7 @@ export function useRead<T extends BaseEntity>(modelName: string) {
   const [data, setData] = useState<Array<T>>([])
   useEffect(() => {
     refetchFn()
-  }, [])
+  })
   const refetchFn = () => {
     axios.get<Array<T>>(`${baseUrl}/${modelName}/read`)
       .then(resposnse => {setData(!resposnse.data ? [] : resposnse.data)})

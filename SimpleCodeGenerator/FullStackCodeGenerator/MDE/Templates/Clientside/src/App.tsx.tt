@@ -38,12 +38,17 @@ font-family: sans-serif;
   .attribute {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
   }
 }
 button {
   background: black;
   color: white;
+  width: 20rem;
+  height: 2rem;
+}
+input {
+  height: 1.5rem;
 }
 `
 

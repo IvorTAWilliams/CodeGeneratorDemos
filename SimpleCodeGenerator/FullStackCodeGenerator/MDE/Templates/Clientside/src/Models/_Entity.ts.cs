@@ -13,7 +13,7 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class _Entity_ts_tt_fa53644d_a3e2_4448_8b82_aff0dd80f655 : BaseTemplate<EntityTemplate> {
+    public partial class _Entity_ts_tt_26c6e452_7071_423c_8d06_8aeff2eafdfa : BaseTemplate<EntityTemplate> {
         
         
         #line 16 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Clientside\src\Models\_Entity.ts.tt"

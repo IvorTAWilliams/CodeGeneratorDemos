@@ -13,7 +13,7 @@ export function useRead<T extends BaseEntity>(modelName: string) {
   const [data, setData] = useState<Array<T>>([])
   useEffect(() => {
     refetchFn()
-  }, [])
+  })
   const refetchFn = () => {
     axios.get<Array<T>>(`${baseUrl}/${modelName}/read`)
       .then(resposnse => {setData(!resposnse.data ? [] : resposnse.data)})

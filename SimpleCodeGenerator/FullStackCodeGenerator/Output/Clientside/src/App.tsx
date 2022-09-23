@@ -7,7 +7,8 @@ import {
   Routes
 } from "react-router-dom";
 import BookPage from './Views/Pages/BookPage';
-import FryingpanPage from './Views/Pages/FryingpanPage';
+import PagePage from './Views/Pages/PagePage';
+import OrderPage from './Views/Pages/OrderPage';
 
 const AppWrapper = styled.div`
 font-family: sans-serif;
@@ -37,6 +38,9 @@ button {
   background: black;
   color: white;
 }
+input {
+  height: 1.5rem;
+}
 `
 
 function App() {
@@ -45,12 +49,14 @@ function App() {
       <Router>
         <div className='nav'>
           <Link to="Book">Book</Link>
-          <Link to="Fryingpan">Fryingpan</Link>
+          <Link to="Page">Page</Link>
+          <Link to="Order">Order</Link>
         </div>
         <div className='body'>
           <Routes>
             <Route path="/Book" element={<BookPage />} />
-            <Route path="/Fryingpan" element={<FryingpanPage />} />
+            <Route path="/Page" element={<PagePage />} />
+            <Route path="/Order" element={<OrderPage />} />
           </Routes>
         </div>
       </Router>

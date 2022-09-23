@@ -13,7 +13,7 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class package_json_tt_d3cc4c3d_afa1_47fb_810a_dcae19ff2e64 : BaseTemplate<ProjectTemplate> {
+    public partial class package_json_tt_d8228608_dff4_430f_a10c_11e10daf2600 : BaseTemplate<ProjectTemplate> {
         
         
         #line 77 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\package.json.tt"

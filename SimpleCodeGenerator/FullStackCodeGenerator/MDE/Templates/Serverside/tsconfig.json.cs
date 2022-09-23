@@ -13,7 +13,7 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class tsconfig_json_tt_72c7302d_984d_412d_a5f5_07ce421d19d7 : BaseTemplate<ProjectTemplate> {
+    public partial class tsconfig_json_tt_6309481d_8b5a_4423_a041_106eed16b5c5 : BaseTemplate<ProjectTemplate> {
         
         
         #line 28 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\tsconfig.json.tt"

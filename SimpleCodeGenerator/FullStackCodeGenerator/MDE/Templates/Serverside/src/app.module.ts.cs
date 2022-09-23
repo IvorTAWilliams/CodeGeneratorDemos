@@ -13,10 +13,10 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class app_module_ts_tt_02a0f461_aa58_4c90_898a_16e9141d3d1e : BaseTemplate<ProjectTemplate> {
+    public partial class app_module_ts_tt_bb6f4e27_5f12_4367_b4c0_16404447f2ca : BaseTemplate<ProjectTemplate> {
         
         
-        #line 14 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+        #line 30 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
 
     public override string RelativeFilePath => $"Serverside/src/app.module.ts";
 
@@ -28,18 +28,96 @@ namespace FullStackCodeGenerator {
             this.GenerationEnvironment = null;
             
             #line 3 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
-            this.Write(@"import { BookController } from './Controllers/BookController';
-import { Module } from '@nestjs/common';
-import { StorageProvider } from './Services/StorageProvider';
 
-@Module({
-  imports: [],
-  controllers: [BookController],
-  providers: [StorageProvider],
-})
-export class AppModule {}
+    foreach (var entity in Model.Project.Entities)
+    {
 
-");
+            
+            #line default
+            #line hidden
+            
+            #line 7 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write("import { ");
+            
+            #line default
+            #line hidden
+            
+            #line 7 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture( entity.Name ));
+            
+            #line default
+            #line hidden
+            
+            #line 7 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write("Controller } from \'./Controllers/");
+            
+            #line default
+            #line hidden
+            
+            #line 7 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture( entity.Name ));
+            
+            #line default
+            #line hidden
+            
+            #line 7 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write("Controller\';\r\n");
+            
+            #line default
+            #line hidden
+            
+            #line 8 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+
+    }
+
+            
+            #line default
+            #line hidden
+            
+            #line 11 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write("import { Module } from \'@nestjs/common\';\r\nimport { StorageProvider } from \'./Serv" +
+                    "ices/StorageProvider\';\r\n\r\n@Module({\r\n  imports: [],\r\n  controllers: [\r\n");
+            
+            #line default
+            #line hidden
+            
+            #line 17 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+
+    foreach (var entity in Model.Project.Entities)
+    {
+
+            
+            #line default
+            #line hidden
+            
+            #line 21 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write("    ");
+            
+            #line default
+            #line hidden
+            
+            #line 21 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture( entity.Name ));
+            
+            #line default
+            #line hidden
+            
+            #line 21 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write("Controller,\r\n");
+            
+            #line default
+            #line hidden
+            
+            #line 22 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+
+    }
+
+            
+            #line default
+            #line hidden
+            
+            #line 25 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\app.module.ts.tt"
+            this.Write("  ],\r\n  providers: [StorageProvider],\r\n})\r\nexport class AppModule {}\r\n\r\n");
             
             #line default
             #line hidden

@@ -13,7 +13,7 @@ namespace FullStackCodeGenerator {
     using System;
     
     
-    public partial class StorageProvider_ts_tt_e56fc529_5d48_4ea9_b3b8_41c02c440cea : BaseTemplate<ProjectTemplate> {
+    public partial class StorageProvider_ts_tt_53c337bc_93a9_473b_8bf6_e54cbc22b4c2 : BaseTemplate<ProjectTemplate> {
         
         
         #line 33 "P:\CodeGeneratorDemos\SimpleCodeGenerator\FullStackCodeGenerator\MDE\Templates\Serverside\src\Services\StorageProvider.ts.tt"

@@ -11,18 +11,39 @@
         {
           "name": "Description",
           "type": "string"
+        },
+        {
+          "name": "Price",
+          "type": "string"
         }
       ]
     },
     {
-      "name": "Fryingpan",
+      "name": "Page",
       "attributes": [
         {
-          "name": "Title",
+          "name": "BookId",
           "type": "string"
         },
         {
-          "name": "Eggman",
+          "name": "Contents",
+          "type": "string"
+        },
+        {
+          "name": "PageNumber",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "Order",
+      "attributes": [
+        {
+          "name": "BookId",
+          "type": "string"
+        },
+        {
+          "name": "Quantity",
           "type": "string"
         }
       ]
